@@ -2,7 +2,7 @@
 require_once './push_controller.php';
 
 
-$http_header = PushController::setHttpHeader();
+$http_header = PushController::fetchHttpHeader();
 
 $post = PushController::createPostData();
 
