@@ -1,3 +1,2 @@
 <?php
-  echo 'こんにちは。楽しいbotのサンプルページです。';
- 
+  file_get_contents('php://input'); 
