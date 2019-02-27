@@ -3,7 +3,6 @@ require_once './push_model.php';
 
 class PushController
 {
-
   public function fetchHttpHeader() {
       $fetched_http_header = PushModel::setHttpHeader();
 
@@ -11,8 +10,7 @@ class PushController
   }
 
   public function createPostData() {
-
-      $message = 'このbotは開発中です。';
+      $message = PushModel::getArticle();
       $post = PushModel::setMessage($message);
 
       return $post;
@@ -29,13 +27,5 @@ class PushController
     ];
 
     return $options;
-  }
-
-  public function execCurl() {
-
-  }
-
-  public function getHttpStatus() {
-
   }
 }
