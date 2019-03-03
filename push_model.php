@@ -1,5 +1,5 @@
 <?php
-require_once "../phpQuery-onefile.php";
+require_once dirname(__FILE__) . "/../phpQuery-onefile.php";
 
 class PushModel 
 {

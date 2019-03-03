@@ -1,5 +1,5 @@
 <?php
-require_once './push_controller.php';
+require_once dirname(__FILE__) . '/push_controller.php';
 
 
 $http_header = PushController::fetchHttpHeader();

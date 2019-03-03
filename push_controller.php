@@ -1,5 +1,5 @@
 <?php
-require_once './push_model.php';
+require_once dirname(__FILE__) . '/push_model.php';
 
 class PushController
 {
