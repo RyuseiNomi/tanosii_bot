@@ -1,13 +1,13 @@
 <?php
 require_once dirname(__FILE__) . "/../phpQuery-onefile.php";
+require_once dirname(__FILE__) . "/info.php";
 
 class PushModel 
 {
     public function setHttpHeader() {
       // HTTPヘッダを設定
-      $channelToken = '1RAnZkrV9St/06xFIcSuP1IFtEBw7wNyPe5asDD2emN1ZP/LHbFZV09nfVmRg2D+6CbEb1frOhSg1p2NBpWn9PXbb7sIAY9J2cc9GhIqDuSu3pWyNHg+gsbbQsgvUFvZ6u3yfpo4qj6XBqXjTBwtBAdB04t89/1O/w1cDnyilFU=';
       $headers = [
-        'Authorization: Bearer ' . $channelToken,
+        'Authorization: Bearer ' . Info::CHANNEL_TOKEN,
         'Content-Type: application/json; charset=utf-8',
       ];
 
@@ -43,7 +43,7 @@ class PushModel
         }
 
         $post_json = [
-            'to' => 'U3ddcc2097e839cb62592ef78f337f90c',
+            'to' => Info::USER_ID,
             'messages' => [
                 [
                     'type' => 'text',
